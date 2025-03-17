@@ -1,0 +1,41 @@
+﻿@using WebApplication10000.Models
+@model List<Course>
+@{
+    ViewData["Title"] = "Home Page";    
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>
+                   Course ID
+                </th>
+                 <th>
+                   Course Name
+                </th>
+                <th>
+                    Course Rating
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            @foreach (var course in Model)
+            {
+                <tr>
+                    <td>@course.CourseID</td>
+                    <td>@course.CourseName</td>
+                    <td>@course.Rating</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
